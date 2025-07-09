@@ -52,6 +52,47 @@ export type Database = {
           updated_at?: string
         }
       }
+      worksheets: {
+        Row: {
+          id: string
+          client_id: string | null
+          client_name: string
+          type: "PPh 21" | "PPh 23" | "PPN" | "PPh Badan" | "PPh Final UMKM"
+          period: string
+          status: "Draft" | "Dalam Proses" | "Menunggu Review" | "Selesai"
+          assignee: string | null
+          amount: number | null
+          notes: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          client_id?: string | null
+          client_name: string
+          type: "PPh 21" | "PPh 23" | "PPN" | "PPh Badan" | "PPh Final UMKM"
+          period: string
+          status?: "Draft" | "Dalam Proses" | "Menunggu Review" | "Selesai"
+          assignee?: string | null
+          amount?: number | null
+          notes?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          client_id?: string | null
+          client_name?: string
+          type?: "PPh 21" | "PPh 23" | "PPN" | "PPh Badan" | "PPh Final UMKM"
+          period?: string
+          status?: "Draft" | "Dalam Proses" | "Menunggu Review" | "Selesai"
+          assignee?: string | null
+          amount?: number | null
+          notes?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+      }
       documents: {
         Row: {
           id: string
